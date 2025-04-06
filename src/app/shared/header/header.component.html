@@ -1,1 +1,33 @@
-<p>header works!</p>
+<p class="myText">
+    {{ companyName }}
+</p>
+
+<p [class]="titleClasses">
+    price: {{ total | currency }}
+</p>
+
+<p>
+    date: {{ currentDate | date: 'fullDate' }}
+</p>
+
+<div>
+    @if (isShow) {
+        <img [src]="imageURL" [alt]="imageAlt" />
+    }
+</div>
+
+<div>
+    @if (users.length > 0) {
+        <ul>
+            @for (item of users; track item.id; let idx = $index) {
+                <li>{{ item.id }} name: {{ item.name }} index: {{idx}}</li>    
+            } @empty {
+                <li>no items</li>
+            }
+        </ul>
+    }
+</div>
+
+<div>
+    <button (click)="handleClickMe()">Click Me</button>
+</div>

@@ -1,10 +1,13 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-logo',
-  imports: [],
+  standalone: true,
+  imports: [NgOptimizedImage],
   templateUrl: './logo.component.html',
-  styleUrl: './logo.component.css'
+  styleUrls: ['./logo.component.css']
+
 })
 export class LogoComponent {
 
