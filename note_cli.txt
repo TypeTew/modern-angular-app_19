@@ -1,3 +1,6 @@
+
+ng new modern-angular-app_19 --defaults --style=css --standalone --routing --ssr=false
+
 สร้างหน้าจอ component
 - ng g c about 
 - ng g c shared/header
