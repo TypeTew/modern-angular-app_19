@@ -8,5 +8,5 @@ import { UserProfileComponent } from "../user-profile/user-profile.component";
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  profile = "mary";
 }

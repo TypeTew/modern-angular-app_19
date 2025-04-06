@@ -7,6 +7,6 @@ import { Component, input } from '@angular/core';
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent {
-  profile = input<string>("John");
+  profile = input<string>("");
   
 }
