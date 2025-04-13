@@ -10,4 +10,11 @@ import { UserProfileComponent } from '../user-profile/user-profile.component';
 export class FooterComponent {
   profile = {id: 1, name: 'Bob'};
 
+
+  handleUserProfile(hello: string) {
+    // console.log('User profile clicked!');
+    alert('User profile clicked! , ' + hello);
+    return hello;
+  }
+
 }

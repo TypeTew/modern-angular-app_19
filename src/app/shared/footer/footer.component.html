@@ -1,4 +1,4 @@
 <p>
     footer works!
-    <app-user-profile [profile]="profile" />
+    <app-user-profile [profile]="profile" (onUserProfile)="handleUserProfile($event)" />
 </p>
