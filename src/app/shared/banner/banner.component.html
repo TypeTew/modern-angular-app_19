@@ -1,4 +1,14 @@
 <div class="title">
-    <h2>Welcome to banner</h2>
+    <h2>{{ title() }}</h2>
     <ng-content />
+
+    @if (isToggle()) {
+        <h3>hello toggle</h3>
+    }
+
+    <p>
+        {{banner().id}} {{banner().title}}
+    </p>
+
+    <button (click)="updateData()">Update data</button>
 </div>
