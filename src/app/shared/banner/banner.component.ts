@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -14,6 +14,22 @@ export class BannerComponent {
       title: 'Coke'
     });
 
+  bannerPrice = signal(500);
+
+  constructor() {
+    //effect คือ ฟังก์ชันที่ใช้ในการติดตามการเปลี่ยนแปลงของ signal
+    effect(() => {
+      // ทำครั้งแรก ครั้งเดียว
+      console.log('init banner');
+    });
+    effect(() => {
+      // ทำครั้งแรก และทำอีกครั้งเมื่อตัวแปร signals เปลี่ยนค่า
+      console.log(this.title());
+      console.log(this.tax());
+    });
+  }
+  tax = computed(() => this.bannerPrice() * 0.07);   //จะอัปเดตอัตโนมัติทุกครั้งที่ค่าในนั้นเปลี่ยน
+
   updateData(): void {
     this.title.set("Hello signals");
     this.isToggle.update(value => !value);
@@ -23,7 +39,7 @@ export class BannerComponent {
           title: 'Pepsi'
         }
       ));
-
+      this.bannerPrice.set(1000);
   }
 
 
