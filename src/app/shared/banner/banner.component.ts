@@ -27,6 +27,15 @@ export class BannerComponent {
       console.log(this.title());
       console.log(this.tax());
     });
+    effect((onCleanup) => {
+      const timer = setTimeout(() => {
+        this.title.set('new Modern Angular');
+      }, 3000);
+      onCleanup(() => {
+        clearTimeout(timer);
+      })
+  });
+
   }
   tax = computed(() => this.bannerPrice() * 0.07);   //จะอัปเดตอัตโนมัติทุกครั้งที่ค่าในนั้นเปลี่ยน
 
