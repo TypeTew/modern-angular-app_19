@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { UserProfileComponent } from '../user-profile/user-profile.component';
+import { BannerComponent } from '../banner/banner.component';
 
 @Component({
   selector: 'app-footer',
-  imports: [UserProfileComponent],
+  imports: [UserProfileComponent, BannerComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })
