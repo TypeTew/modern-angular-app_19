@@ -5,7 +5,7 @@ import { AboutDashboardComponent } from "./about-dashboard/about-dashboard.compo
 
 export const dashboardRoutes: Routes = [
     {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent, // <router-outlet />
         children: [
             { path: '', component: HomeDashboardComponent },

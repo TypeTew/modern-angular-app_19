@@ -14,6 +14,13 @@ export const routes: Routes = [
         title: 'ติดต่อเรา'
     },
     ...productRoutes,
-    ...dashboardRoutes,
+    {
+        // Lazy loading the dashboard module
+        // The module will be loaded when the user navigates to /dashboard
+        // แยก การโหลดโมดูล dashboard ออกไปเป็นโมดูลย่อย
+        // โดยจะโหลดโมดูลนี้เมื่อผู้ใช้ไปที่ /dashboard
+        path: 'dashboard',
+        loadChildren: () => import('./dashboards/dashboard.routes').then(m => m.dashboardRoutes), // Load the dashboard module
+    },
     {path: '**', component: NotFoundComponent}
 ];
