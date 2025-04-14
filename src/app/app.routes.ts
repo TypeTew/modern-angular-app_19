@@ -14,8 +14,7 @@ export const routes: Routes = [
     },
     ...productRoutes,
     {
-        // Lazy loading the dashboard module
-        // The module will be loaded when the user navigates to /dashboard
+        // การโหลดโมดูลแบบ Lazy Loading
         // แยก การโหลดโมดูล dashboard ออกไปเป็นโมดูลย่อย
         // โดยจะโหลดโมดูลนี้เมื่อผู้ใช้ไปที่ /dashboard
         path: 'dashboard',
