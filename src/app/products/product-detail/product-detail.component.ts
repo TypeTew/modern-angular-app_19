@@ -14,7 +14,7 @@ export class ProductDetailComponent {
 
   constructor() {
     effect(() => {
-      const id = this.route.snapshot.params['id'];
+      const id = this.route.snapshot.params['id']; // Get the id from the route
       this.id.set(id);
     });
   }
