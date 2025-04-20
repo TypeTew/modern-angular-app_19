@@ -5,3 +5,10 @@ ng new modern-angular-app_19 --defaults --style=css --standalone --routing --ssr
 - ng g c about 
 - ng g c shared/header
 - ng g c shared/footer
+
+
+สร้าง service
+-ng g s shared/title
+
+
+https://gitlab.com/codingthailand/modern-angular-app
