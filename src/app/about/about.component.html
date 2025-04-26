@@ -1,1 +1,12 @@
-<p>about works!</p>
+<div>
+    {{ versionInfo$ | async | json }}
+</div>
+
+<div>
+    @if (versionInfo$ | async; as versionInfo) {
+       <p>
+        API Version: {{ versionInfo.data.version }}
+       </p>
+    }
+</div>
+
