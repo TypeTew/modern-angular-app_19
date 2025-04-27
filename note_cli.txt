@@ -5,14 +5,14 @@ ng new modern-angular-app_19 --defaults --style=css --standalone --routing --ssr
 - ng g c about 
 - ng g c shared/header
 - ng g c shared/footer
-
+- ng g c products/product-v2
 
 สร้าง service แบบ ธรรมดาทั่วไป
 -ng g s products/shared/product
 
 สร้าง service แบบ signal
 -ng g s shared/title
-
+-ng g s products/shared/product_signal
 
 ค้นหาที่ goole : json to ts
 
