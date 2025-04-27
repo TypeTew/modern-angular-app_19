@@ -3,6 +3,7 @@ import { ProductService } from '../shared/product.service';
 import { Product, ProductResponse } from '../shared/product.model';
 import { JsonPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
@@ -12,27 +13,30 @@ import { Subscription } from 'rxjs';
 })
 export class ProductComponent {
 
-  private readonly productsService = inject(ProductService);
+  private readonly productService = inject(ProductService);
 
   product: Product[] = [];
   isLoading = true;
   
   sub: Subscription | undefined;
+  errorMessage!: string ;
 
   ngOnInit(): void {
-    this.sub = this.productsService.getProduct().subscribe({
+    this.sub = this.productService.getProduct().subscribe({
       next: (response: ProductResponse) => {
         this.product = response.data;
       },
-      error: (err : any) => {
-        console.error(err);
+      error: (err: HttpErrorResponse) => {
+        console.log(err);
+        this.errorMessage = err.error.message; // message คือจาก api
         this.isLoading = false;
       },
       complete: () => {
         this.isLoading = false;
       }
-    });
+     });
   }
+
 
 
   ngOnDestroy(): void {

@@ -1,1 +1,14 @@
-<p>product-v3 works!</p>
+Product3
+@if (product3Service.productResponse.isLoading()) {
+    <p>กำลังโหลดข้อมูล...</p>
+ }
+ 
+ @if (product3Service.productResponse.error()) {
+    <p>{{ product3Service.productResponse.error() }}</p>
+ }
+ 
+ @if (product3Service.productResponse.hasValue()) {
+    {{ product3Service.productResponse.value() | json }}
+ }
+ 
+ 
