@@ -21,3 +21,7 @@ https://gitlab.com/codingthailand/modern-angular-app
 
 
 ng add @angular/material
+
+สร้าง auth guard
+E:\DEV_Project\Angular\modern-angular-app_19>ng g guard shared/auth 
+✔ Which type of guard would you like to create? CanMatch

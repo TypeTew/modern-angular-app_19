@@ -1,1 +1,13 @@
-<p>home-dashboard works!</p>
+<p class="text-4xl">
+    ยินดีต้อนรับคุณ  {{ (profile$ | async)?.name }}
+  </p>
+  
+  <p>
+     email: {{ (profile$ | async)?.email }} role:
+      {{ (profile$ | async)?.role }} 
+  </p>
+  
+  <div>
+      <button (click)="logout()">ออกจากระบบ</button>
+  </div>
+  
