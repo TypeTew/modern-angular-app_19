@@ -1,1 +1,13 @@
-<p>product-v2 works!</p>
+Product2
+@if (!product2Service.productResponse() && !product2Service.errorMessage()) {
+    <p>กำลังโหลดข้อมูล...</p>
+}
+
+@if (product2Service.errorMessage()) {
+    <p>{{ product2Service.errorMessage() }}</p>
+}
+
+@if (product2Service.productResponse()) {
+    <p>{{ product2Service.productResponse()?.data | json }}</p>
+}
+
