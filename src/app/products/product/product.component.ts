@@ -4,10 +4,11 @@ import { Product, ProductResponse } from '../shared/product.model';
 import { JsonPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
+import { MatHeaderComponent } from "../../shared/mat-header/mat-header.component";
 
 @Component({
   selector: 'app-product',
-  imports: [JsonPipe],
+  imports: [JsonPipe, MatHeaderComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
