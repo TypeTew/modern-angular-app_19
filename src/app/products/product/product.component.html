@@ -1,1 +1,9 @@
-<p>product works!</p>
+@if (isLoading) {
+    <p>Loading...</p>
+}
+
+@if (product.length > 0) {
+    <p>
+        {{ product | json }}
+    </p>
+}

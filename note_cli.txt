@@ -7,8 +7,14 @@ ng new modern-angular-app_19 --defaults --style=css --standalone --routing --ssr
 - ng g c shared/footer
 
 
-สร้าง service
+สร้าง service แบบ ธรรมดาทั่วไป
+-ng g s products/shared/product
+
+สร้าง service แบบ signal
 -ng g s shared/title
+
+
+ค้นหาที่ goole : json to ts
 
 
 https://gitlab.com/codingthailand/modern-angular-app
